@@ -1,27 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
- * main - return a cmbination of number
+ * main - Print all combinations of two two digits with, and space followed by new line
+ *
  * Return: return 0 if successful
  */
 
 int main(void)
 {
-	int i, j;
+	int digit1, digit2;
 
-	for (i = 0; i < 100; i++)
+	for (digit1 = 0; digit1 <= 98; digit1++)
 	{
-		for (j = 0; j < 100; j++)
+		for (digit2 = digit1 + 1; digit2 <= 99; digit2++)
 		{
-			if (i < j)
+
+			putchar((digit1 / 10) + '0');
+			putchar((digit1 % 10) + '0');
+			putchar(32);
+			putchar((digit2 / 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 / 10 != 9 || digit1 % 10 != 8)
 			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
-				putchar((' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i ! = 98 || j !=99)
-				{
-			putchar(',');
-		pu	
+				putchar(44);
+				putchar(32);
+			}
+		}
+	}
+	putchar(10);
+	return (0);
+}
